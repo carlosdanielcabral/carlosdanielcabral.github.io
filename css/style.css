@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    padding: 20px 20px;
+    box-shadow: 1px 2px 20px 10px rgba(0, 0, 0, 0.781);
+    background-color: #f7f7f7;
+}
+
+h2{
+    color: rgba(0, 0, 0, 0.644);
+}
+
+nav{
+    padding: 20px 0;
+}
+
+ul li{
+    list-style: none;
+}
+
+a, a:hover, a:link, a:visited{
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    padding: 5px 10px;
+    margin: 0 10px 0 0;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+nav ul li a:hover{
+    background-color: rgb(77, 77, 77);
+    color: white;
+    transition-duration: 0.5s;
+}
+
+main{
+    display: flex;
+    background: url(https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_960_720.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+#foto-descricao{
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    margin: 10px 20px;
+    border-radius: 2px;
+    height: 560px;
+    text-align: center;
+}
+
+#foto-descricao img{
+    border-radius: 50%;
+
+}
+
+#minhas-habilidades, #blogs{
+    padding: 20px;
+    font-size: 20px;;
+}
+
+.habilidades-container, .blogs-container{
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    display: block;
+    padding: 30px;
+    margin: 20px 0;
+    width: 200px;
+    height: 200px;
+}
+
+.hard-skills{
+    background-color: #2F5161;
+    border-color: #2F5161;
+    color: white;
+}
+
+.soft-skills{
+    background-color: #72C6ED;
+    border-color: #72C6ED;
+    color: white;
+}
+
+.blogs-container{
+    background-color: #946329;
+    border-color: #946329;
+}
+
+.blogs-container ul li a{
+    color: white;
+}
