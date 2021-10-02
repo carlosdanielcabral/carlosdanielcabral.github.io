@@ -8,17 +8,19 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
-header{
+header{    
+    font-style: italic;
     padding: 20px 20px;
-    box-shadow: 1px 2px 20px 10px rgba(0, 0, 0, 0.781);
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.781);
     background-color: #f7f7f7;
 }
 
 h2{
     color: rgba(0, 0, 0, 0.644);
+    font-size: 20px;
 }
 
 nav{
@@ -30,19 +32,20 @@ ul li{
 }
 
 a, a:hover, a:link, a:visited{
-    color: rgb(46, 46, 46);
     text-decoration: none;
 }
 
 nav ul li{
-    display: inline-block;
+    display: inline-flex;
 }
 
 nav ul li a{
-    padding: 5px 10px;
+    padding: 13px 10px;
     margin: 0 10px 0 0;
-    border: 1px solid black;
-    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    border-radius: 5px;
+    background-color: rgb(71, 70, 70);
+    color: white;
 }
 nav ul li a:hover{
     background-color: rgb(77, 77, 77);
@@ -52,14 +55,18 @@ nav ul li a:hover{
 
 main{
     display: flex;
-    background: url(https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_960_720.jpg) no-repeat;
+    flex-wrap: wrap;
+    background: url(../img/quadro-negro-bg.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
     color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    line-height: 30px;
 }
 
 #foto-descricao{
-    border: 1px solid rgba(0, 0, 0, 0.336);
+    border: 1px solid rgba(58, 58, 58, 0.267);
     display: inline-block;
     width: 200px;
     padding: 20px;
@@ -67,6 +74,11 @@ main{
     border-radius: 2px;
     height: 560px;
     text-align: center;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.349), rgba(0, 0, 0, 0));
+}
+
+#foto-descricao:hover{
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0));
 }
 
 #foto-descricao img{
@@ -76,35 +88,53 @@ main{
 
 #minhas-habilidades, #blogs{
     padding: 20px;
-    font-size: 20px;;
+    font-size: 20px;
 }
 
 .habilidades-container, .blogs-container{
     border: 1px solid rgba(0, 0, 0, 0.336);
     display: block;
-    padding: 30px;
-    margin: 20px 0;
+    padding: 20px;
+    margin: 40px 0;
     width: 200px;
     height: 200px;
+    box-shadow: 5px 5px 5px 5px rgba(73, 73, 73, 0.082);
+    text-shadow: 5px 1px 3px rgba(0, 0, 0, 0.062);
+    cursor:default;
 }
 
 .hard-skills{
-    background-color: #2F5161;
-    border-color: #2F5161;
+    background: linear-gradient(to bottom right, #2f516179, #2f5161af);
+    border: none;
     color: white;
+}
+
+.hard-skills:hover{
+    background: linear-gradient(to bottom right, #2f516179, #2f516188);
 }
 
 .soft-skills{
-    background-color: #72C6ED;
-    border-color: #72C6ED;
+    background: linear-gradient(to bottom right, #72c6ed73, #72c6ed91);
+    border: none;
     color: white;
 }
 
+.soft-skills:hover{
+    background: linear-gradient(to bottom right, #72c6ed73, #72c6ed75);
+
+}
 .blogs-container{
-    background-color: #946329;
-    border-color: #946329;
+    background: linear-gradient(to bottom right, #94642998, #946429c9);
+    border: none;
 }
 
+.blogs-container:hover{
+    background: linear-gradient(to bottom right, #946429ab, #946429a8);
+}
 .blogs-container ul li a{
     color: white;
+}
+
+section h4{
+    margin: 0 0 15px 0;
 }
