@@ -16,23 +16,20 @@
 
   <body>
     <header>
-      <h1>Carlos Daniel Cabral Figueiredo Alves</h1>
-      <h2>Desenvolvedor de Software</h2>
-
       <nav>
-
+        <span>
+          <h1>Carlos Daniel Cabral |</h1>
+          <h2>Desenvolvedor de Software</h2>
+        </span>
         <ul>
           <li>
-            <h3><a href="#minha-foto"> Sobre mim </a></h3>
+          <h3><a href="#minha-foto"> Sobre mim </a></h3>
           </li>
           <li><a href="#quem-sou-eu">Quem sou eu? </a></li>
           <li><a href="#minhas-habilidades">Minhas habilidades</a></li>
           <li><a href="#blogs">Blogs que eu acompanho</a></li>
         </ul>
       </nav>
-    </header>
-
-    <main>
 
       <section id="foto-descricao">
         <img src="img/eu.webp" alt="Minha foto" width="200px" id="#minha-foto" />
@@ -41,36 +38,31 @@
           Desde a adolescência me interessei pela área de desenvolvimento e hoje
           busco me inserir nesse mercado.
         </p>
-
       </section>
-      
-      <section id="minhas-habilidades">
-        <h3>Minhas habilidades:</h3>
-        <section class="habilidades-container hard-skills">
-          <h4>Hard Skills</h4>
-    
+    </header>
+
+    <main class="grid-container">
+      <section id="habilidades" class="grid-item1">
+        <h3 id="minhas-habilidades">Minhas habilidades:</h3>
+        <h4>Hard Skills</h4>
           <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li><strong>Javascript</strong></li>
-              <li><strong>PHP</strong></li>
+              <li>HTML, </li>
+              <li>CSS, </li>
+              <li><strong>Javascript, </strong></li>
+              <li><strong>PHP, </strong></li>
               <li>MySQL</li>
           </ul>
-        </section>
     
-        <section class="habilidades-container soft-skills">
           <h4>Soft Skills</h4>
           <ul>
-              <li>Resiliência</li>
-              <li>Determinação</li>
+              <li>Resiliência, </li>
+              <li>Determinação, </li>
               <li>Flexibilidade</li>
           </ul>
-        </section>
       </section>
 
-      <section id="blogs">
+      <section id="blogs" class="grid-item2">
         <h3>Blogs que acompanho:</h3>
-        <section class="blogs-container">
           <ul>
               <li>
                   <a rel="noopener noreferrer" href="https://www.tecmundo.com.br/" target="_blank">Tecmundo</a>
@@ -84,8 +76,13 @@
                   <a rel="noopener noreferrer" href="https://www.codigofonte.com.br/">Código Fonte</a>
               </li>
           </ul>
-        </section>
       </section>
     </main>
+
+    <footer>
+      <h5>Desenvolvido por</h5>
+      <h6>Carlos Daniel Cabral Figueiredo Alves
+      </h6>
+    </footer>
   </body>
 </html>
