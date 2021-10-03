@@ -32,13 +32,14 @@ body{
 
 header{
     display: block;
-    height: 100vh;
+    height: 120vh;
     background-color: rgb(20, 21, 24);
     color: white;
 }
 
 header h1, header h2{
     display: inline-block;
+    font-weight: 200;
 }
 
 h1{
@@ -63,11 +64,11 @@ header ul li a{
 #foto-descricao{
     width: 75vw;
     text-align: center;
-    margin: 150px auto;
+    margin: 100px auto;
 }
 #foto-descricao img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     animation-name: rotation;
     animation-duration: 1.5s;
