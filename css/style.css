@@ -13,7 +13,7 @@
 }
 
 @keyframes rotation{
-    from{transform: rotateY(90deg);}
+    from{transform: rotateY(-90deg);}
     to{transform: rotateY(0deg);}
 }
 
@@ -37,6 +37,9 @@ header{
     color: white;
 }
 
+header span{
+    display: flex;
+}
 header h1, header h2{
     display: inline-block;
     font-weight: 200;
@@ -57,6 +60,19 @@ header nav{
     padding: 10px 15px;
 }
 
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 14px;
+    }
+
+    h2{
+        font-size: 12px;
+    }
+
+    header nav{
+        display: block;
+    }
+}
 header ul li a{
     color: white;
 }
@@ -75,10 +91,34 @@ header ul li a{
 }
 
 #foto-descricao p{
-    font-size: 30px;
+    font-size: 28px;
     padding: 50px 0;
     animation-name: fade-in;
     animation-duration: 7s;
+}
+
+@media only screen and (max-width: 600px){
+    header ul li{
+        display: block;
+    }
+    header ul li a{
+        font-size: 14px;
+    }
+
+    #foto-descricao{
+        display: block;
+        width: 90%;
+    }
+
+    #foto-descricao img{
+        width: 150px;
+        height: 150px;
+    }
+
+    #foto-descricao p{
+        font-size: 20px;
+    }
+
 }
 
 main{
@@ -91,6 +131,11 @@ h3{
     margin: 10px 0 30px 0;
 }
 
+@media only screen and (max-width: 600px){
+    h3{
+        margin: 0;
+    }
+}
 h4{
     margin: 30px 0 0 0;
 }
@@ -107,10 +152,24 @@ h4{
 .grid-item2{
     grid-column-start: 4;
 }
+
+@media only screen and (max-width: 600px){
+    .grid-item2{
+        grid-column-start: 1;
+    }
+}
 #habilidades{
     font-size: 30px;
 }
 
+@media only screen and (max-width: 600px){
+    main{
+        padding: 20px;
+    }
+    #habilidades{
+        font-size: 20px;
+    }
+}
 #blogs ul li{
     display: block;
     padding:0 0 20px 0;
@@ -118,6 +177,18 @@ h4{
 
 #blogs{
     font-size: 25px;
+}
+
+@media only screen and (max-width: 600px){
+    #blogs{
+        font-size: 20px;
+        padding: 0;
+    }
+
+    main ul li{
+        display: block;
+        padding: 5px 0 5px 0;
+    }
 }
 
 footer{
@@ -137,4 +208,14 @@ h6{
     font-size: 28px;
     padding: 30px 0;
     font-weight: 100;
+}
+
+@media only screen and (max-width: 600px){
+    h5{
+        font-size: 14px;
+    }
+
+    h6{
+        font-size: 18px;
+    }
 }
