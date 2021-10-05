@@ -28,6 +28,7 @@ a{
 }
 body{
     font-family: Montserrat, sans-serif;
+    font-weight: 200;
 }
 
 header{
@@ -105,7 +106,7 @@ main{
 
 h3{
     margin: 10px 0 30px 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 #minhas-habilidades{
@@ -116,6 +117,7 @@ h3{
 h4{
     margin: 30px 0 0 0;
     line-height: 70px;
+    font-weight: 300;
 }
 
 .grid-container{
@@ -160,8 +162,12 @@ h4{
 
 footer{
     height: 45vh;
-    background-color: rgb(20, 21, 24);
+    background-color: #121617;
     text-align: center;
+}
+
+.redes-sociais img{
+    width: 30px;
 }
 
 h5{
