@@ -74,7 +74,7 @@ header ul li a:hover{
     color: rgb(201, 201, 201);
 }
 
-.dropdown h2{
+.dropdown button{
     display: none;
 }
 
@@ -185,7 +185,10 @@ footer h5{
 
 @media only screen and (max-width: 600px){
     .nome{
-        display: block;
+        padding: 10px 0;
+    }
+    header{
+        padding: 0;
     }
 
     header h1{
@@ -202,22 +205,26 @@ footer h5{
     }
 
     header nav{
-        display: flex;
-    }
-
-    .dropdown{
-        position: absolute;
-        display: inline-block;
-    }
-
-    .dropdown h2{
-        display: inline-block;
-        float: right;
+        display: block;
         padding: 10px;
     }
 
-    .dropdown h2:hover + .dropdown-items{
+    .dropdown{
+        position: relative;
         display: block;
+        text-align: center;
+    }
+
+    .dropdown button, .dropdown button:hover, .dropdown button:active{
+        display: inline-block;
+        background-color: inherit;
+        border: none;
+        padding: 0;
+    }
+
+    .dropdown button:focus + .dropdown-items{
+        display: block;
+        margin: 0 auto;
     }
     
     .dropdown-items{
@@ -225,7 +232,7 @@ footer h5{
         display: none;
         position: absolute;
         top: 50px;
-        width: 100vw;
+        width: 80vw;
         min-height: 200px;
     }
     
