@@ -7,6 +7,8 @@
     <meta name="description" content="Portfólio de desenvolvimento Web">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Carlos Daniel Cabral">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
     <title>Carlos Daniel Cabral | Desenvolvedor de Software</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,18 +19,25 @@
   <body>
     <header>
       <nav>
-        <span>
-          <h1>Carlos Daniel Cabral |</h1>
+        <span class="nome">
+          <h1>Carlos Daniel Cabral</h1>
           <h2>Desenvolvedor de Software</h2>
         </span>
-        <ul>
-          <li>
-          <h3><a href="#minha-foto"> Sobre mim </a></h3>
-          </li>
-          <li><a href="#quem-sou-eu">Quem sou eu? </a></li>
-          <li><a href="#minhas-habilidades">Minhas habilidades</a></li>
-          <li><a href="#blogs">Blogs que eu acompanho</a></li>
-        </ul>
+
+        <div class="dropdown">
+          <h2><img src="img/menu_white.svg" alt="ícone de menu"></h2>
+
+          <div class="dropdown-items">
+            <ul>
+              <li>
+              <a href="#minha-foto"> Sobre mim </a>
+              </li>
+              <li><a href="#quem-sou-eu">Quem sou eu? </a></li>
+              <li><a href="#minhas-habilidades">Minhas habilidades</a></li>
+              <li><a href="#blogs">Blogs que eu acompanho</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
 
       <section id="foto-descricao">
@@ -43,26 +52,26 @@
 
     <main class="grid-container">
       <section id="habilidades" class="grid-item1">
-        <h3 id="minhas-habilidades">Minhas habilidades:</h3>
+        <h3 id="minhas-habilidades">Minhas habilidades</h3>
         <h4>Hard Skills</h4>
           <ul>
-              <li>HTML, </li>
-              <li>CSS, </li>
-              <li><strong>Javascript, </strong></li>
-              <li><strong>PHP, </strong></li>
+              <li>HTML </li>
+              <li>CSS </li>
+              <li><strong>Javascript </strong></li>
+              <li><strong>PHP </strong></li>
               <li>MySQL</li>
           </ul>
     
           <h4>Soft Skills</h4>
           <ul>
-              <li>Resiliência, </li>
-              <li>Determinação, </li>
+              <li>Resiliência </li>
+              <li>Determinação </li>
               <li>Flexibilidade</li>
           </ul>
       </section>
 
       <section id="blogs" class="grid-item2">
-        <h3>Blogs que acompanho:</h3>
+        <h3>Blogs que acompanho</h3>
           <ul>
               <li>
                   <a rel="noopener noreferrer" href="https://www.tecmundo.com.br/" target="_blank">Tecmundo</a>

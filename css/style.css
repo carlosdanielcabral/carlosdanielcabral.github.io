@@ -32,22 +32,26 @@ body{
 
 header{
     display: block;
-    height: 120vh;
-    background-color: rgb(20, 21, 24);
+    height: 100vh;
+    background-color: #121617;
     color: white;
 }
 
-header span{
-    display: flex;
-}
 header h1, header h2{
     display: inline-block;
     font-weight: 200;
 }
 
+.nome{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    cursor: default;
+}
+
 h1{
     font-size: 23px;
-    padding: 0 0 0 5px;
+    padding: 0px 10px;
 }
 
 h2{
@@ -57,24 +61,20 @@ h2{
 header nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 15px;
 }
 
-@media only screen and (max-width: 600px){
-    h1{
-        font-size: 14px;
-    }
-
-    h2{
-        font-size: 12px;
-    }
-
-    header nav{
-        display: block;
-    }
-}
 header ul li a{
     color: white;
+}
+
+header ul li a:hover{
+    color: rgb(201, 201, 201);
+}
+
+.dropdown h2{
+    display: none;
 }
 
 #foto-descricao{
@@ -97,30 +97,6 @@ header ul li a{
     animation-duration: 7s;
 }
 
-@media only screen and (max-width: 600px){
-    header ul li{
-        display: block;
-    }
-    header ul li a{
-        font-size: 14px;
-    }
-
-    #foto-descricao{
-        display: block;
-        width: 90%;
-    }
-
-    #foto-descricao img{
-        width: 150px;
-        height: 150px;
-    }
-
-    #foto-descricao p{
-        font-size: 20px;
-    }
-
-}
-
 main{
     display: block;
     height: 100vh;
@@ -129,15 +105,17 @@ main{
 
 h3{
     margin: 10px 0 30px 0;
+    font-weight: 500;
 }
 
-@media only screen and (max-width: 600px){
-    h3{
-        margin: 0;
-    }
+#minhas-habilidades{
+    border-left: 10px solid #EDAE49;
+    padding: 0 0 0 10px;
 }
+
 h4{
     margin: 30px 0 0 0;
+    line-height: 70px;
 }
 
 .grid-container{
@@ -153,42 +131,31 @@ h4{
     grid-column-start: 4;
 }
 
-@media only screen and (max-width: 600px){
-    .grid-item2{
-        grid-column-start: 1;
-    }
-}
 #habilidades{
     font-size: 30px;
 }
 
-@media only screen and (max-width: 600px){
-    main{
-        padding: 20px;
-    }
-    #habilidades{
-        font-size: 20px;
-    }
-}
-#blogs ul li{
-    display: block;
-    padding:0 0 20px 0;
+#blogs ul li,
+#habilidades ul li,
+#habilidades h4{
+    padding:0 0 20px 20px;
 }
 
 #blogs{
     font-size: 25px;
 }
 
-@media only screen and (max-width: 600px){
-    #blogs{
-        font-size: 20px;
-        padding: 0;
-    }
+#blogs ul li{
+    display: block;
+}
 
-    main ul li{
-        display: block;
-        padding: 5px 0 5px 0;
-    }
+#blogs h3{
+    border-left: 10px solid #58BC82;
+    padding-left: 10px;
+}
+
+#blogs ul li a:hover{
+    border-bottom: 1px solid rgb(56, 56, 56);
 }
 
 footer{
@@ -211,6 +178,107 @@ h6{
 }
 
 @media only screen and (max-width: 600px){
+    .nome{
+        display: block;
+    }
+
+    header h1{
+        font-size: 14px;
+        display: block;
+    }
+
+    header h2{
+        font-size: 12px;
+    }
+
+    header h1, header h2{
+        text-align: left;
+    }
+
+    header nav{
+        display: flex;
+    }
+
+    .dropdown{
+        position: absolute;
+        display: inline-block;
+    }
+
+    .dropdown h2{
+        display: inline-block;
+        float: right;
+        padding: 10px;
+    }
+
+    .dropdown h2:hover + .dropdown-items{
+        display: block;
+    }
+    
+    .dropdown-items{
+        background-color: #fff;
+        display: none;
+        position: absolute;
+        top: 50px;
+        width: 100vw;
+        min-height: 200px;
+    }
+    
+    .dropdown ul li{
+        display: block;
+        padding: 10px;
+    }
+    .dropdown-items ul li a{
+        color: black;
+    }
+
+    header ul li a{
+        font-size: 14px;
+    }
+
+    #foto-descricao{
+        display: block;
+        width: 90%;
+    }
+
+    #foto-descricao img{
+        width: 150px;
+        height: 150px;
+    }
+
+    #foto-descricao p{
+        font-size: 20px;
+    }
+
+    h4{
+        line-height: 50px;;
+    }
+    .grid-item2{
+        grid-column-start: 1;
+    }
+
+    main{
+        padding: 20px;
+    }
+    #habilidades{
+        font-size: 20px;
+    }
+
+    #blogs{
+        font-size: 20px;
+        padding: 0;
+    }
+
+    #blogs ul li,
+    #habilidades ul li,
+    #habilidades h4{
+        padding: 0 0 0px 10px;
+    }
+
+    main ul li{
+        display: block;
+        padding: 5px 0 5px 0;
+    }
+
     h5{
         font-size: 14px;
     }
