@@ -105,13 +105,16 @@ main{
 }
 
 h3{
-    margin: 10px 0 30px 0;
+    margin: 0px 0 30px 0;
     font-weight: 400;
 }
 
 #minhas-habilidades{
-    border-left: 10px solid #007ab6;
-    padding: 0 0 0 10px;
+   /* border-left: 10px solid #007ab6;
+    background-color: #007ab6; */
+    padding: 10px;
+    color: black;
+    border-radius: 5px 5px 0 0;
 }
 
 h4{
@@ -134,7 +137,10 @@ h4{
 }
 
 #habilidades{
-    font-size: 30px;
+    font-size: 20px;
+    box-shadow: 1px 1px 5px 3px rgba(196, 196, 196, 0.233);
+    border-radius: 5px;
+    height: 500px;
 }
 
 #blogs ul li,
@@ -144,7 +150,10 @@ h4{
 }
 
 #blogs{
-    font-size: 25px;
+    font-size: 20px;
+    box-shadow: 1px 1px 5px 3px rgba(196, 196, 196, 0.233);
+    border-radius: 5px;
+    height: 500px;
 }
 
 #blogs ul li{
@@ -152,8 +161,11 @@ h4{
 }
 
 #blogs h3{
-    border-left: 10px solid #58BC82;
-    padding-left: 10px;
+    /* border-left: 10px solid #58BC82;
+    background-color: #58BC82; */
+    color: black;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
 }
 
 #blogs ul li a:hover{
@@ -161,7 +173,7 @@ h4{
 }
 
 footer{
-    height: 45vh;
+    height: 70vh;
     background-color: #121617;
     text-align: center;
 }
@@ -280,12 +292,18 @@ footer h5{
         padding: 20px;
     }
     #habilidades{
-        font-size: 20px;
+        font-size: 18px;
+        height: 420px;
+        width: 90vw;
+        margin: auto;
     }
 
     #blogs{
-        font-size: 20px;
+        font-size: 18px;
         padding: 0;
+        height: 200px;
+        width: 90vw;;
+        margin: auto;
     }
 
     #blogs ul li,
@@ -305,5 +323,99 @@ footer h5{
 
     footer h5{
         font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1270px){
+    .nome{
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    header{
+        padding: 0;
+    }
+
+    header h1{
+        font-size: 20px;
+        display: block;
+    }
+
+    header h2{
+        font-size: 18px;
+    }
+
+    header h1, header h2{
+        text-align: left;
+    }
+
+    header nav{
+        display: block;
+        padding: 10px;
+    }
+
+    .dropdown{
+        position: relative;
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown button, .dropdown button:hover, .dropdown button:active{
+        display: inline-block;
+        background-color: inherit;
+        border: none;
+        padding: 0;
+    }
+
+    .dropdown button img{
+        width: 35px;;
+    }
+
+    .dropdown:hover .dropdown-items{
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .dropdown-items{
+        background-color: #fff;
+        display: none;
+        position: absolute;
+        top: 50px;
+        width: 80vw;
+        min-height: 200px;
+    }
+    
+    .dropdown ul li{
+        display: block;
+        padding: 10px;
+    }
+    .dropdown-items ul li a{
+        color: black;
+    }   
+}
+
+@media only screen and (max-width: 900px){
+    .grid-item2{
+        grid-column-start: 1;
+    }
+    #habilidades{
+        font-size: 18px;
+        height: 420px;
+        width: 90vw;
+        margin: auto;
+    }
+
+    #blogs{
+        font-size: 18px;
+        padding: 0;
+        height: 200px;
+        width: 90vw;;
+        margin: auto;
+    }
+
+    #blogs ul li,
+    #habilidades ul li,
+    #habilidades h4{
+        padding: 0 0 0px 10px;
     }
 }
