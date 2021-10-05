@@ -110,7 +110,7 @@ h3{
 }
 
 #minhas-habilidades{
-    border-left: 10px solid #EDAE49;
+    border-left: 10px solid #007ab6;
     padding: 0 0 0 10px;
 }
 
@@ -168,6 +168,7 @@ footer{
 
 .redes-sociais img{
     width: 30px;
+    padding: 10px;
 }
 
 footer h4{
@@ -186,7 +187,9 @@ footer h5{
 @media only screen and (max-width: 600px){
     .nome{
         padding: 10px 0;
+        justify-content: center;
     }
+
     header{
         padding: 0;
     }
@@ -222,7 +225,11 @@ footer h5{
         padding: 0;
     }
 
-    .dropdown button:focus + .dropdown-items{
+    .dropdown button img{
+        width: 35px;;
+    }
+
+    .dropdown:hover .dropdown-items{
         display: block;
         margin: 0 auto;
     }
