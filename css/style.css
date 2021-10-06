@@ -198,8 +198,9 @@ footer h5{
 
 @media only screen and (max-width: 600px){
     .nome{
+        display: block;
         padding: 10px 0;
-        justify-content: center;
+        text-align: center;
     }
 
     header{
@@ -207,12 +208,12 @@ footer h5{
     }
 
     header h1{
-        font-size: 14px;
-        display: block;
+        font-size: 18px;
+        line-height: 30px;
     }
 
     header h2{
-        font-size: 12px;
+        font-size: 15px;
     }
 
     header h1, header h2{
@@ -251,7 +252,7 @@ footer h5{
         display: none;
         position: absolute;
         top: 50px;
-        width: 80vw;
+        width: 90vw;
         min-height: 200px;
     }
     
@@ -261,6 +262,7 @@ footer h5{
     }
     .dropdown-items ul li a{
         color: black;
+        font-size: 18px;
     }
 
     header ul li a{
@@ -270,6 +272,7 @@ footer h5{
     #foto-descricao{
         display: block;
         width: 90%;
+        margin-top: 50px;
     }
 
     #foto-descricao img{
