@@ -26,6 +26,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
 body{
     font-family: Montserrat, sans-serif;
     font-weight: 200;
@@ -83,6 +84,7 @@ header ul li a:hover{
     text-align: center;
     margin: 100px auto;
 }
+
 #foto-descricao img{
     width: 200px;
     height: 200px;
@@ -100,7 +102,6 @@ header ul li a:hover{
 
 main{
     display: block;
-    height: 100vh;
     padding: 50px;
 }
 
@@ -125,20 +126,27 @@ h4{
 
 .grid-container{
     display: grid;
+    grid-gap: 50px;
 }
 
 .grid-item1{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3;
 }
 
 .grid-item2{
-    grid-column-start: 4;
+    grid-column: 3 / 4;
+}
+
+.grid-item3{
+    grid-column: 1 / 3;
+}
+
+main > section{
+    box-shadow: 1px 1px 5px 3px rgba(196, 196, 196, 0.233);
 }
 
 #habilidades{
     font-size: 20px;
-    box-shadow: 1px 1px 5px 3px rgba(196, 196, 196, 0.233);
     border-radius: 5px;
     height: 500px;
 }
@@ -151,7 +159,6 @@ h4{
 
 #blogs{
     font-size: 20px;
-    box-shadow: 1px 1px 5px 3px rgba(196, 196, 196, 0.233);
     border-radius: 5px;
     height: 500px;
 }
@@ -172,10 +179,28 @@ h4{
     border-bottom: 1px solid rgb(56, 56, 56);
 }
 
+#projects{
+    padding: 30px;
+}
+
+.project-lessons-learned{
+    display: flex;
+    align-items: center;
+}
+
+.project-lessons-learned a{
+    font-size: 30px;
+}
+
+.project-lessons-learned img {
+    width: 70px;
+    padding: 0 20px;
+}
+
 footer{
-    height: 70vh;
     background-color: #121617;
     text-align: center;
+    padding: 50px;
 }
 
 .redes-sociais img{
@@ -186,7 +211,6 @@ footer{
 footer h4{
     color: white;
     font-size: 20px;
-    padding: 100px 0 0 0;
 }
 
 footer h5{
