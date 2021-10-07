@@ -359,6 +359,10 @@ footer h5{
         justify-content: center;
     }
 
+    .nome h1{
+        text-align: center;
+    }
+    
     header{
         padding: 0;
     }
@@ -419,9 +423,13 @@ footer h5{
     .dropdown-items ul li a{
         color: black;
     }   
-}
 
-@media only screen and (max-width: 900px){
+    #blogs ul li,
+    #habilidades ul li,
+    #habilidades h4{
+        padding: 0 0 0px 10px;
+    }
+
     .grid-container{
         grid-column-gap: 0;
     }
@@ -445,9 +453,9 @@ footer h5{
         margin: auto;
     }
 
-    #blogs ul li,
-    #habilidades ul li,
-    #habilidades h4{
-        padding: 0 0 0px 10px;
-    }
+
+}
+
+@media only screen and (max-width: 900px){
+
 }
