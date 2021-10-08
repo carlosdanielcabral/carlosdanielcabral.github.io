@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     bottom: 0;
@@ -7,85 +7,85 @@
     top: 0;
 }
 
-@keyframes fade-in{
-    from{opacity: 0;}
-    to(opacity: 1;)
+@keyframes fade-in {
+    from {opacity: 0;}
+    to (opacity: 1;)
 }
 
-@keyframes rotation{
+@keyframes rotation {
     from{transform: rotateY(-90deg);}
     to{transform: rotateY(0deg);}
 }
 
-ul li{
+ul li {
     display: inline-block;
     padding: 0 5px;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-body{
+body {
     font-family: Montserrat, sans-serif;
     font-weight: 200;
 }
 
-header{
+header {
     display: block;
     height: 100vh;
     background-color: #121617;
     color: white;
 }
 
-header h1, header h2{
+header h1, header h2 {
     display: inline-block;
     font-weight: 200;
 }
 
-.nome{
+.nome {
     display: flex;
     align-items: center;
     padding: 0;
     cursor: default;
 }
 
-h1{
+h1 {
     font-size: 23px;
     padding: 0px 10px;
 }
 
-h2{
+h2 {
     font-size: 18px;
 }
 
-header nav{
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
 }
 
-header ul li a{
+header ul li a {
     color: white;
 }
 
-header ul li a:hover{
+header ul li a:hover {
     color: rgb(201, 201, 201);
 }
 
-.dropdown button{
+.dropdown button {
     display: none;
 }
 
-#foto-descricao{
+#foto-descricao {
     width: 75vw;
     text-align: center;
     margin: 100px auto;
 }
 
-#foto-descricao img{
+#foto-descricao img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -93,24 +93,24 @@ header ul li a:hover{
     animation-duration: 1.5s;
 }
 
-#foto-descricao p{
+#foto-descricao p {
     font-size: 28px;
     padding: 50px 0;
     animation-name: fade-in;
     animation-duration: 7s;
 }
 
-main{
+main {
     display: block;
     padding: 50px;
 }
 
-h3{
+h3 {
     margin: 0px 0 30px 0;
     font-weight: 400;
 }
 
-#minhas-habilidades{
+#minhas-habilidades {
    /* border-left: 10px solid #007ab6;
     background-color: #007ab6; */
     padding: 10px;
@@ -118,56 +118,54 @@ h3{
     border-radius: 5px 5px 0 0;
 }
 
-h4{
+h4 {
     margin: 30px 0 0 0;
     line-height: 70px;
     font-weight: 300;
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-gap: 50px;
 }
 
-.grid-item1{
+.grid-item1 {
     grid-column: 1 / 3;
 }
 
-.grid-item2{
+.grid-item2 {
     grid-column: 3 / 4;
 }
 
-.grid-item3{
+.grid-item3 {
     grid-column: 1 / 3;
 }
 
-main > section{
+main > section {
     box-shadow: 1px 1px 5px 3px rgba(196, 196, 196, 0.233);
 }
 
-#habilidades{
+#habilidades {
     font-size: 20px;
     border-radius: 5px;
     height: 500px;
 }
 
-#blogs ul li,
-#habilidades ul li,
-#habilidades h4{
-    padding:0 0 20px 20px;
+#blogs ul li , #habilidades ul li , #habilidades h4 {
+    padding: 0 0 20px 20px;
 }
 
-#blogs{
+#blogs {
     font-size: 20px;
     border-radius: 5px;
     height: 500px;
 }
 
-#blogs ul li{
+#blogs ul li {
     display: block;
 }
 
-#blogs h3{
+#blogs h3 {
     /* border-left: 10px solid #58BC82;
     background-color: #58BC82; */
     color: black;
@@ -175,20 +173,20 @@ main > section{
     border-radius: 5px 5px 0 0;
 }
 
-#blogs ul li a:hover{
+#blogs ul li a:hover {
     border-bottom: 1px solid rgb(56, 56, 56);
 }
 
-#projects{
+#projects {
     padding: 30px;
 }
 
-.project-lessons-learned{
+.project-lessons-learned {
     display: flex;
     align-items: center;
 }
 
-.project-lessons-learned a{
+.project-lessons-learned a {
     font-size: 30px;
 }
 
@@ -197,81 +195,81 @@ main > section{
     padding: 0 20px;
 }
 
-footer{
+footer {
     background-color: #121617;
     text-align: center;
     padding: 50px;
 }
 
-.redes-sociais img{
+.redes-sociais img {
     width: 40px;
     padding: 10px;
 }
 
-footer h4{
+footer h4 {
     color: white;
     font-size: 20px;
 }
 
-footer h5{
+footer h5 {
     color: white;
     font-size: 28px;
     padding: 30px 0;
     font-weight: 100;
 }
 
-@media only screen and (max-width: 600px){
-    .nome{
+@media only screen and (max-width: 600px) {
+    .nome {
         display: block;
         padding: 10px 0;
         text-align: center;
     }
 
-    header{
+    header {
         padding: 0;
     }
 
-    header h1{
+    header h1 {
         font-size: 18px;
         line-height: 30px;
     }
 
-    header h2{
+    header h2 {
         font-size: 15px;
     }
 
-    header h1, header h2{
+    header h1 , header h2 {
         text-align: left;
     }
 
-    header nav{
+    header nav {
         display: block;
         padding: 10px;
     }
 
-    .dropdown{
+    .dropdown {
         position: relative;
         display: block;
         text-align: center;
     }
 
-    .dropdown button, .dropdown button:hover, .dropdown button:active{
+    .dropdown button , .dropdown button:hover , .dropdown button:active {
         display: inline-block;
         background-color: inherit;
         border: none;
         padding: 0;
     }
 
-    .dropdown button img{
+    .dropdown button img {
         width: 35px;;
     }
 
-    .dropdown:hover .dropdown-items{
+    .dropdown:hover .dropdown-items {
         display: block;
         margin: 0 auto;
     }
     
-    .dropdown-items{
+    .dropdown-items {
         background-color: #fff;
         display: none;
         position: absolute;
@@ -280,31 +278,31 @@ footer h5{
         min-height: 200px;
     }
     
-    .dropdown ul li{
+    .dropdown ul li {
         display: block;
         padding: 10px;
     }
-    .dropdown-items ul li a{
+    .dropdown-items ul li a {
         color: black;
         font-size: 18px;
     }
 
-    header ul li a{
+    header ul li a {
         font-size: 14px;
     }
 
-    #foto-descricao{
+    #foto-descricao {
         display: block;
         width: 90%;
         margin-top: 50px;
     }
 
-    #foto-descricao img{
+    #foto-descricao img {
         width: 150px;
         height: 150px;
     }
 
-    #foto-descricao p{
+    #foto-descricao p {
         font-size: 20px;
     }
 
