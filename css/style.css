@@ -306,24 +306,26 @@ footer h5 {
         font-size: 20px;
     }
 
-    h4{
+    h4 {
         line-height: 50px;;
     }
-    .grid-item2{
+
+    .grid-item2 {
         grid-column-start: 1;
     }
 
-    main{
+    main {
         padding: 20px;
     }
-    #habilidades{
+
+    #habilidades {
         font-size: 18px;
         height: 420px;
         width: 90vw;
         margin: auto;
     }
 
-    #blogs{
+    #blogs {
         font-size: 18px;
         padding: 0;
         height: 200px;
@@ -331,54 +333,52 @@ footer h5 {
         margin: auto;
     }
 
-    #blogs ul li,
-    #habilidades ul li,
-    #habilidades h4{
+    #blogs ul li , #habilidades ul li , #habilidades h4 {
         padding: 0 0 0px 10px;
     }
 
-    main ul li{
+    main ul li {
         display: block;
         padding: 5px 0 5px 0;
     }
 
-    footer h4{
+    footer h4 {
         font-size: 14px;
     }
 
-    footer h5{
+    footer h5 {
         font-size: 18px;
     }
 }
 
 @media only screen and (max-width: 1280px){
-    .nome{
+    .nome {
         padding: 10px 0;
         justify-content: center;
     }
 
-    .nome h1{
+    .nome h1 {
         text-align: center;
     }
     
-    header{
+    header {
         padding: 0;
     }
 
-    header h1{
+    header h1 {
         font-size: 20px;
         display: block;
     }
 
-    header h2{
+    header h2 {
         font-size: 18px;
     }
 
-    header h1, header h2{
+    header h1, header h2 {
         text-align: left;
     }
 
-    header nav{
+    header nav {
         display: block;
         padding: 10px;
     }
