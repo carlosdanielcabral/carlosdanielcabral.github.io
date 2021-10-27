@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.selecionado {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-color: #7fb069;
+  color: white;
+  height: 20vh;
+}
+
+h1 {
+  padding: 50px;
+}
+
+main {
+  background-color: white;
+  height: 80vh;
+  padding: 0 50px;
+  color: rgb(65, 65, 65);
+}
+
+p {
+  padding: 20px 0;
+}
+
+input {
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid gray;
+}
+
+button {
+  padding: 7px 10px;
+  margin: 5px 0;
+  border-radius: 3px;
+  border: none;
+}
+
+#botoes {
+  padding: 10px 0;
+}
+
+.tarefas {
+  border: 1px solid rgb(202, 202, 202);
+  padding: 20px 25px 35px 25px;
+  border-radius: 5px;
+}
+
+li {
+  border-bottom: 1px solid rgb(215, 229, 250);
+  padding: 15px 0 0 0;
+  color: rgb(88, 88, 88);
+}
+
+.bud-green {
+  background-color: #7fb069;
+  color: white;
+}
+
+.dark-red {
+  background-color: #92140c;
+  color: white;
+}
+
+.fawn {
+  background-color: #dda15e;
+  color: white;
+}
+
+.antique-ruby {
+  background-color: #832232;
+  color: white;
+}
+
+.carolina-blue {
+  background-color: #0081a7;
+  color: white;
+}
+
+.rocket-metallic {
+  background-color: #897c80;
+  color: white;
+}
+
+.bittersweet {
+  background-color: #f87060;
+  color: white;
+}

@@ -181,18 +181,25 @@ main > section {
     padding: 30px;
 }
 
-.project-lessons-learned {
+.project {
     display: flex;
     align-items: center;
+    padding: 20px 0;
 }
 
-.project-lessons-learned a {
+.project a {
     font-size: 30px;
 }
 
-.project-lessons-learned img {
+.project img {
     width: 70px;
     padding: 0 20px;
+}
+
+.todo-list>a{
+    color: rgb(14, 123, 131);
+    font-size: 40px;
+    font-family: 'Satisfy', cursive;
 }
 
 footer {
