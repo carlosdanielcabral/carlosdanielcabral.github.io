@@ -185,6 +185,7 @@ main > section {
     display: flex;
     align-items: center;
     padding: 20px 0;
+    
 }
 
 .project a {
@@ -200,6 +201,10 @@ main > section {
     color: rgb(14, 123, 131);
     font-size: 40px;
     font-family: 'Satisfy', cursive;
+}
+
+.pixels-art > a > img{
+    width: 200px;
 }
 
 footer {
