@@ -1,55 +1,59 @@
 const input = document.getElementById('texto-tarefa');
-const botaoAdicionar = document.getElementById('criar-tarefa');
-const listaOrdenada = document.getElementById('lista-tarefas');
-const botaoRemoverSelecionado = document.getElementById('remover-selecionado');
-const botaoApagarTudo = document.getElementById('apaga-tudo');
-const botaoRemoverFinalizados = document.getElementById('remover-finalizados');
-const botaoSalvarTarefas = document.getElementById('salvar-tarefas');
+const addButton = document.getElementById('criar-tarefa');
+const ordenedList = document.getElementById('lista-tarefas');
+const removeSelectedButton = document.getElementById('remover-selecionado');
+const removeAllButton = document.getElementById('apaga-tudo');
+const removeCompletedButton = document.getElementById('remover-finalizados');
+const saveButton = document.getElementById('salvar-tarefas');
+const moveUpButton = document.getElementById('mover-cima');
+const moveDownButton = document.getElementById('mover-baixo');
 const tarefasFinalizadas = document.getElementsByClassName('completed');
-let tarefas = document.getElementsByTagName('li');
+const tarefas = document.getElementsByTagName('li');
 
+// Verifica se há alguma tarefa salva no localStorage e, se houver, adiciona em uma li à ol.
 if (localStorage.length > 0) {
   for (let i = 0; i < localStorage.length; i += 1) {
     const li = document.createElement('li');
     const tarefa = JSON.parse(localStorage.getItem(`tarefa-${i + 1}`));
-    li.innerText = tarefa.conteudo;
-    li.className = tarefa.classe;
-    listaOrdenada.appendChild(li);
+    li.innerText = tarefa.content;
+    li.className = tarefa.class;
+    ordenedList.appendChild(li);
   }
 }
 
 // Retorna o valor contido no campo input#texto-tarefa
-function obterTarefaDigitada() {
+function getInputValue() {
   return input.value;
 }
 
 // Apaga o texto do campor input
-function limparInput() {
+function clearInput() {
   input.value = '';
 }
 
 // Verifica se há algum elemento selecionado e, se houver, o retorna
 function verificarSelecionado() {
-  let selecionado = false;
+  let selectedElement = '';
 
   for (let i = 0; i < tarefas.length; i += 1) {
     if (tarefas[i].className.indexOf('selecionado') !== -1) {
-      selecionado = tarefas[i];
+      selectedElement = tarefas[i];
     }
   }
 
-  return selecionado;
+  return selectedElement;
 }
 
 // Remove a seleção
-function removerSelecao(elemento, classe) {
+function removeSelected(elemento, classe) {
   elemento.classList.remove(classe);
 }
 
+// Seleciona a tarefa
 function selecionarTarefa() {
   const selecionado = verificarSelecionado();
-  if (selecionado !== false) {
-    removerSelecao(selecionado, 'selecionado');
+  if (selecionado !== '') {
+    removeSelected(selecionado, 'selecionado');
   }
 
   this.className += ' selecionado';
@@ -57,55 +61,75 @@ function selecionarTarefa() {
 
 // Adiciona a classe completed à tarefa clicada duas vezes
 function completarTarefa() {
-  if (this.className.indexOf('completed') === -1) {
-    this.className = 'completed';
-  } else {
-    this.classList.remove('completed');
-  }
+  this.classList.toggle('completed');
 }
 
 // Adiciona o valor digitado no campo input#texto-tarefa no OL como uma LI
-
-function adicionarTarefa() { }
-
-botaoAdicionar.addEventListener('click', () => {
-  const tarefa = obterTarefaDigitada();
+addButton.addEventListener('click', () => {
+  const tarefa = getInputValue();
   const itemDaLista = document.createElement('li');
   itemDaLista.innerText = tarefa;
   itemDaLista.addEventListener('click', selecionarTarefa);
   itemDaLista.addEventListener('dblclick', completarTarefa);
-  listaOrdenada.appendChild(itemDaLista);
+  ordenedList.appendChild(itemDaLista);
 
-  limparInput();
+  clearInput();
 });
 
-botaoRemoverSelecionado.addEventListener('click', () => {
+// Em um clique no botao o elemento selecionado é removido
+removeSelectedButton.addEventListener('click', () => {
   const selecionado = document.querySelector('.selecionado');
   selecionado.remove();
 });
 
-botaoApagarTudo.addEventListener('click', () => {
-  listaOrdenada.innerHTML = '';
+// Em um clique no botão todas as li's são apagadas
+removeAllButton.addEventListener('click', () => {
+  ordenedList.innerHTML = '';
 });
 
-botaoSalvarTarefas.addEventListener('click', () => {
-  for (let i = 0; i < (listaOrdenada.children.length); i += 1) {
+// Em um clique no botão as tarefas são salvas no localStorage
+saveButton.addEventListener('click', () => {
+  for (let i = 0; i < (ordenedList.children.length); i += 1) {
     const tarefa = {
       tarefa: i,
-      conteudo: listaOrdenada.children[i].innerText,
-      classe: listaOrdenada.children[i].className,
+      content: ordenedList.children[i].innerText,
+      class: ordenedList.children[i].className,
     };
 
     localStorage.setItem(`tarefa-${i + 1}`, JSON.stringify(tarefa));
   }
 });
 
-botaoRemoverFinalizados.addEventListener('click', () => {
+// Em um clique no botão os elementos finalizados (com a classe completed) são removidos
+removeCompletedButton.addEventListener('click', () => {
   while (tarefasFinalizadas.length > 0) {
     tarefasFinalizadas[tarefasFinalizadas.length - 1].remove();
   }
 });
 
+// Em um clique no botão o elemento selecionado é movido para cima
+moveUpButton.addEventListener('click', () => {
+  const selecionado = verificarSelecionado();
+  if (selecionado !== '') {
+    const elementoAnterior = selecionado.previousElementSibling;
+    if (elementoAnterior !== null) {
+      elementoAnterior.insertAdjacentElement('beforebegin', selecionado);
+    }
+  }
+});
+
+// Em um clique no botão o elemento selecionado é movido para baixo
+moveDownButton.addEventListener('click', () => {
+  const selecionado = verificarSelecionado();
+  if (selecionado !== '') {
+    const elementoSeguinte = selecionado.nextElementSibling;
+    if (elementoSeguinte !== null) {
+      elementoSeguinte.insertAdjacentElement('afterend', selecionado);
+    }
+  }
+});
+
+// Adiciona a todas as tarefas que já estão na OL quando a página carrega o escutador
 for (let i = 0; i < tarefas.length; i += 1) {
   tarefas[i].addEventListener('click', selecionarTarefa);
 }
