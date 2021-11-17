@@ -5,12 +5,12 @@
 
 body {
   background-color: #dbcfb0;
-  background-image: url("bordas.png");
+  background-image: url('bordas.png');
   background-repeat: no-repeat;
+  background-size: 100vw 100vh;
 }
 
-header,
-main {
+header , main {
   text-align: center;
 }
 
@@ -19,9 +19,9 @@ header {
 }
 
 h1 {
-  font-family: "Fleur De Leah", cursive;
+  font-family: Fleur De Leah, cursive;
   font-size: 40px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 #color-palette {
@@ -79,7 +79,7 @@ button {
   background-color: #ddca7d;
 }
 
-.rose-madder {
+.rose {
   background-color: #df2935;
 }
 
@@ -87,7 +87,7 @@ button {
   background-color: #b59da4;
 }
 
-.terra-cotta {
+.terra {
   background-color: #e07a5f;
 }
 

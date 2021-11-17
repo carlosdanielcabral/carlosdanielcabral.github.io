@@ -1,49 +1,42 @@
-const body = document.querySelector('body');
 const cores = document.getElementsByClassName('color');
 const boardSize = document.getElementById('board-size');
 const botaoGeradorDePixels = document.getElementById('generate-board');
 const pixelBoard = document.getElementById('pixel-board');
 const botaoLimpar = document.getElementById('clear-board');
-let altura = window.innerHeight;
-let largura = window.innerWidth;
-const coresArray = ['metallic-seaweed', 'fire-opal', 'turquoise-green', 'flax', 'rose-madder', 'lilac-luster', 'terra-cotta'];
-let indexArray = [];
+
 let tamanho = 5;
-let pixel = '';
+let pixel;
 
-body.style.backgroundSize = `${largura}px ${altura}px`;
+// Gera as cores da paleta - exceto a primeira, preta - aleatoriamente ao carregar a página
+const gerarCoresRandomicas = () => {
+  const coresArray = ['metallic-seaweed', 'fire-opal', 'turquoise-green', 'flax', 'rose', 'terra'];
+  const indexArray = [];
 
-window.addEventListener('resize', () => {
-  altura = window.innerHeight;
-  largura = window.innerWidth;
-  body.style.backgroundSize = `${largura}px ${altura}px`;
-});
-
-function sortearIndices() {
-  while (indexArray.length < 4) {
-    let numero = Math.floor(Math.random() * (coresArray.length - 1));
-    if (indexArray.indexOf(numero) === -1) {
-      indexArray.push(numero);
-    }
+  while (indexArray.length < 3) {
+    const numeroAleatorio = Math.floor(Math.random() * 5);
+    if (!indexArray.includes(numeroAleatorio)) indexArray.push(numeroAleatorio);
   }
-}
 
-console.log(sortearIndices())
+  for (let i = 0; i < 3; i += 1) {
+    cores[i + 1].className = `color ${coresArray[indexArray[i]]}`;
+  }
+};
+
 // Cria uma div com a classe pixel
-function criarPixels() {
+const criarPixels = () => {
   const div = document.createElement('div');
   div.className = 'pixel';
   return div;
-}
+};
 
 // Remove os filhos do elemento
-function removerFilhos(elemento) {
+const removerFilhos = (elemento) => {
   const filho = elemento;
   filho.innerHTML = '';
-}
+};
 
 // Cria e adiciona os pixels ao pixelBoard
-function preencherPixelBoard() {
+const preencherPixelBoard = () => {
   for (let i = 0; i < tamanho; i += 1) {
     for (let n = 0; n < tamanho; n += 1) {
       const div = criarPixels();
@@ -51,14 +44,51 @@ function preencherPixelBoard() {
     }
   }
   pixel = document.getElementsByClassName('pixel');
-}
+};
 
 // Altera o width do elemento passado como parametro
-function alterarTamanhoElemento(elemento, valor) {
+const alterarTamanhoElemento = (elemento, valor) => {
   const element = elemento;
   element.style.width = `${valor}px`;
-}
+};
 
+// Adiciona um listener ao elemento passado como parametro, com a funcao passada como parametro
+const addListener = (elemento, funcao) => {
+  for (let i = 0; i < elemento.length; i += 1) {
+    elemento[i].addEventListener('click', funcao);
+  }
+};
+
+// Retorno a div de cor que está selecionada
+const retornarElementoSelecionado = () => {
+  let elemento;
+  for (let i = 0; i < cores.length; i += 1) {
+    const selected = cores[i].className.indexOf('selected');
+    if (selected !== -1) {
+      elemento = cores[i];
+    }
+  }
+  return elemento;
+};
+
+// Adiciona a classe da cor selecionada ao pixel clicado
+const pintarPixel = (event) => {
+  const classesDaDiv = retornarElementoSelecionado().className.split(' ');
+  const pixelClicado = event.target;
+
+  const classesDoPixelClicado = pixelClicado.className.split(' ');
+
+  if (classesDoPixelClicado.length > 1) {
+    const corAtual = classesDoPixelClicado[1];
+    pixelClicado.classList.remove(corAtual);
+  }
+
+  const corSelecionada = classesDaDiv[1];
+  pixelClicado.className += ` ${corSelecionada}`;
+  console.log(pixelClicado);
+};
+
+// Remove os pixels do quadro e o preenche de acordo com o tamanho digitado pelo usuário
 botaoGeradorDePixels.addEventListener('click', () => {
   tamanho = parseInt((boardSize.value), 10);
   if (!(Number.isInteger(tamanho))) {
@@ -78,69 +108,38 @@ botaoGeradorDePixels.addEventListener('click', () => {
   addListener(pixel, pintarPixel);
 });
 
-// Retorno a div de cor que está selecionada
-function retornarElementoSelecionado() {
-  let elemento;
-  for (let i = 0; i < cores.length; i += 1) {
-    const selected = cores[i].className.indexOf('selected');
-    if (selected !== -1) {
-      elemento = cores[i];
-    }
-  }
-  return elemento;
-}
-
 // Remove a classe selected do elemento que a possui
-function removerSelecao() {
+const removerSelecao = () => {
   for (let i = 0; i < cores.length; i += 1) {
     const selected = cores[i].className.indexOf('selected');
     if (selected !== -1) {
       cores[i].classList.remove('selected');
     }
   }
-}
+};
 
 // Adiciona a classe selected ao elemento
-function adicionarSelecao(event) {
+const adicionarSelecao = (event) => {
   const selecionado = retornarElementoSelecionado();
   const elemento = event.target;
   if (selecionado !== elemento) {
     removerSelecao();
     elemento.className += ' selected';
   }
-}
+};
 
-// Adiciona um listener ao elemento passado como parametro, com a funcao passada como parametro
-function addListener(elemento, funcao) {
-  for (let i = 0; i < elemento.length; i += 1) {
-    elemento[i].addEventListener('click', funcao);
-  }
-}
-
+// Remove as cores dos pixels
 botaoLimpar.addEventListener('click', () => {
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].className = 'pixel';
   }
 });
 
-// Adiciona a classe selecionada à div
-function pintarPixel(event) {
-  const classesDaDiv = retornarElementoSelecionado().className.split(' ');
-  const pixelClicado = event.target;
-
-  const classesDoPixelClicado = pixelClicado.className.split(' ');
-
-  if (classesDoPixelClicado.length > 1) {
-    const corAtual = classesDoPixelClicado[1];
-    pixelClicado.classList.remove(corAtual);
-  }
-
-  const corSelecionada = classesDaDiv[1];
-  pixelClicado.className += ` ${corSelecionada}`;
-  console.log(pixelClicado);
-}
-
-criarPixels();
-preencherPixelBoard();
-addListener(cores, adicionarSelecao);
-addListener(pixel, pintarPixel);
+// Chama as funções necessárias para o funcionamento do programa ao carregar a página
+window.onload = () => {
+  gerarCoresRandomicas();
+  criarPixels();
+  preencherPixelBoard();
+  addListener(cores, adicionarSelecao);
+  addListener(pixel, pintarPixel);
+};
