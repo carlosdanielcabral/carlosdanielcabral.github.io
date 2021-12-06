@@ -12,13 +12,15 @@
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
-  background-color: #7fb069;
+  background-color: #3b738d;
   color: white;
-  height: 20vh;
+  height: 15vh;
+  display: flex;
+  align-items: center;
 }
 
 h1 {
@@ -38,16 +40,22 @@ p {
 
 input {
   display: block;
-  padding: 5px;
+  padding: 10px;
   border-radius: 3px;
-  border: 1px solid gray;
+  border: 0;
+  border-bottom: 1px solid rgb(165, 165, 165);
+  font-size: 16px;
+  width: 50%;
 }
 
 button {
-  padding: 7px 10px;
+  padding: 10px 15px;
   margin: 5px 0;
-  border-radius: 3px;
+  border-radius: 5px;
   border: none;
+  font-size: 16px;
+  background-color: inherit;
+  transition: 200ms;
 }
 
 #botoes {
@@ -67,17 +75,32 @@ li {
 }
 
 .bud-green {
-  background-color: #7fb069;
+  border: 1px solid #418552;
+  color: #418552;
+}
+
+.bud-green:hover {
+  background-color: #418552;
   color: white;
 }
 
 .dark-red {
+  border: 1px solid #92140c;
+  color: #92140c;
+}
+
+.dark-red:hover {
   background-color: #92140c;
   color: white;
 }
 
 .fawn {
-  background-color: #dda15e;
+  border: 1px solid #d1c12e;
+  color: #d1c12e;
+}
+
+.fawn:hover {
+  background-color: #d1c12e;
   color: white;
 }
 
@@ -97,6 +120,11 @@ li {
 }
 
 .bittersweet {
+  border: 1px solid #f87060;
+  color: #f87060;
+}
+
+.bittersweet:hover {
   background-color: #f87060;
   color: white;
 }

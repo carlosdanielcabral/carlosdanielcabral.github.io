@@ -5,20 +5,20 @@ const removeSelectedButton = document.getElementById('remover-selecionado');
 const removeAllButton = document.getElementById('apaga-tudo');
 const removeCompletedButton = document.getElementById('remover-finalizados');
 const saveButton = document.getElementById('salvar-tarefas');
-const moveUpButton = document.getElementById('mover-cima');
-const moveDownButton = document.getElementById('mover-baixo');
+// const moveUpButton = document.getElementById('mover-cima');
+// const moveDownButton = document.getElementById('mover-baixo');
 const tarefasFinalizadas = document.getElementsByClassName('completed');
 const tarefas = document.getElementsByTagName('li');
+const tarefasSalvas = localStorage.getItem('to-do-list') !== null && localStorage.getItem('to-do-list') !== '' ? JSON.parse(localStorage.getItem('to-do-list')) : [];
 
 // Verifica se há alguma tarefa salva no localStorage e, se houver, adiciona em uma li à ol.
-if (localStorage.length > 0) {
-  for (let i = 0; i < localStorage.length; i += 1) {
+if (tarefasSalvas.length > 0) {
+  tarefasSalvas.forEach((tarefa) => {
     const li = document.createElement('li');
-    const tarefa = JSON.parse(localStorage.getItem(`tarefa-${i + 1}`));
-    li.innerText = tarefa.content;
+    li.innerText = tarefa.tarefa;
     li.className = tarefa.class;
     ordenedList.appendChild(li);
-  }
+  })
 }
 
 // Retorna o valor contido no campo input#texto-tarefa
@@ -33,15 +33,14 @@ function clearInput() {
 
 // Verifica se há algum elemento selecionado e, se houver, o retorna
 function verificarSelecionado() {
-  let selectedElement = '';
+  let selected = false;
+  Array.from(tarefas).forEach((tarefa) => {
+    if (tarefa.className.includes('selecionado')) {
+      selected = tarefa;
+    } 
+  })
 
-  for (let i = 0; i < tarefas.length; i += 1) {
-    if (tarefas[i].className.indexOf('selecionado') !== -1) {
-      selectedElement = tarefas[i];
-    }
-  }
-
-  return selectedElement;
+  return selected;
 }
 
 // Remove a seleção
@@ -52,7 +51,7 @@ function removeSelected(elemento, classe) {
 // Seleciona a tarefa
 function selecionarTarefa() {
   const selecionado = verificarSelecionado();
-  if (selecionado !== '') {
+  if (selecionado) {
     removeSelected(selecionado, 'selecionado');
   }
 
@@ -80,6 +79,12 @@ addButton.addEventListener('click', () => {
 removeSelectedButton.addEventListener('click', () => {
   const selecionado = document.querySelector('.selecionado');
   selecionado.remove();
+  tarefasSalvas.forEach((tarefa) => {
+    if (tarefa.tarefa === selecionado.innerText) {
+      tarefasSalvas.splice(tarefasSalvas.indexOf(tarefa), 1);
+      localStorage.setItem('to-do-list', tarefasSalvas);
+    }
+  });
 });
 
 // Em um clique no botão todas as li's são apagadas
@@ -89,15 +94,17 @@ removeAllButton.addEventListener('click', () => {
 
 // Em um clique no botão as tarefas são salvas no localStorage
 saveButton.addEventListener('click', () => {
-  for (let i = 0; i < (ordenedList.children.length); i += 1) {
+  Array.from(ordenedList.children).forEach((li) => {
     const tarefa = {
-      tarefa: i,
-      content: ordenedList.children[i].innerText,
-      class: ordenedList.children[i].className,
+      tarefa: li.innerText,
+      class: li.className,
     };
 
-    localStorage.setItem(`tarefa-${i + 1}`, JSON.stringify(tarefa));
-  }
+    if (!tarefasSalvas.some((t) => t.tarefa === tarefa.tarefa)) {
+      tarefasSalvas.push(tarefa); 
+      localStorage.setItem('to-do-list', JSON.stringify(tarefasSalvas));
+    }
+  })
 });
 
 // Em um clique no botão os elementos finalizados (com a classe completed) são removidos
@@ -107,27 +114,27 @@ removeCompletedButton.addEventListener('click', () => {
   }
 });
 
-// Em um clique no botão o elemento selecionado é movido para cima
-moveUpButton.addEventListener('click', () => {
-  const selecionado = verificarSelecionado();
-  if (selecionado !== '') {
-    const elementoAnterior = selecionado.previousElementSibling;
-    if (elementoAnterior !== null) {
-      elementoAnterior.insertAdjacentElement('beforebegin', selecionado);
-    }
-  }
-});
+// // Em um clique no botão o elemento selecionado é movido para cima
+// moveUpButton.addEventListener('click', () => {
+//   const selecionado = verificarSelecionado();
+//   if (selecionado) {
+//     const elementoAnterior = selecionado.previousElementSibling;
+//     if (elementoAnterior !== null) {
+//       elementoAnterior.insertAdjacentElement('beforebegin', selecionado);
+//     }
+//   }
+// });
 
-// Em um clique no botão o elemento selecionado é movido para baixo
-moveDownButton.addEventListener('click', () => {
-  const selecionado = verificarSelecionado();
-  if (selecionado !== '') {
-    const elementoSeguinte = selecionado.nextElementSibling;
-    if (elementoSeguinte !== null) {
-      elementoSeguinte.insertAdjacentElement('afterend', selecionado);
-    }
-  }
-});
+// // Em um clique no botão o elemento selecionado é movido para baixo
+// moveDownButton.addEventListener('click', () => {
+//   const selecionado = verificarSelecionado();
+//   if (selecionado) {
+//     const elementoSeguinte = selecionado.nextElementSibling;
+//     if (elementoSeguinte !== null) {
+//       elementoSeguinte.insertAdjacentElement('afterend', selecionado);
+//     }
+//   }
+// });
 
 // Adiciona a todas as tarefas que já estão na OL quando a página carrega o escutador
 for (let i = 0; i < tarefas.length; i += 1) {
