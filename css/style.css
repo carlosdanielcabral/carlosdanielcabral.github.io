@@ -207,6 +207,10 @@ main > section {
     width: 200px;
 }
 
+#shopping-cart-img {
+    width: 200px;
+}
+
 footer {
     background-color: #121617;
     text-align: center;
