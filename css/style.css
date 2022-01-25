@@ -179,13 +179,14 @@ main > section {
 
 #projects {
     padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project {
     display: flex;
     align-items: center;
     padding: 20px 0;
-    
 }
 
 .project a {
