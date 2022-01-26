@@ -1,0 +1,89 @@
+body {
+  background-image: url('./images/background.png');
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  background-color: rgba(155, 155, 155, 0.3);
+  text-align: center;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+}
+
+.planets-container {
+  display: flex;
+  justify-content: center;
+}
+
+.planet-card {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+#Mercúrio {
+  width: 2vw;
+}
+
+#Vênus {
+  width: 5vw;
+}
+
+#Terra {
+  width: 5vw;
+}
+
+#Marte {
+  width: 3vw;
+}
+
+#Júpiter {
+  width: 10vw;
+}
+
+#Saturno {
+  width: 10vw;
+}
+
+#Urano {
+  width: 6vw;
+}
+
+#Netuno {
+  width: 6vw;
+}
+
+.missions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mission-card {
+  background: rgba(155, 155, 155, 0.3);
+  margin: 5px;
+  padding: 0px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 25vw; 
+}
+
+.mission-card h3 {
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  padding: 10px;
+}
+
+.mission-card ul {
+  list-style: none;
+  padding: 10px;
+}
