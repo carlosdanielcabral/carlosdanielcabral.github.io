@@ -9,7 +9,7 @@
 
 @keyframes fade-in {
     from {opacity: 0;}
-    to (opacity: 1;)
+    to { opacity: 1; }
 }
 
 @keyframes rotation {
@@ -34,7 +34,7 @@ body {
 
 header {
     display: block;
-    height: 100vh;
+    height: 130vh;
     background-color: #121617;
     color: white;
 }
@@ -146,66 +146,68 @@ main > section {
 }
 
 #habilidades {
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 5px;
-    height: 500px;
+    height: 200px;
 }
 
 #blogs ul li , #habilidades ul li , #habilidades h4 {
     padding: 0 0 20px 20px;
 }
 
-#blogs {
-    font-size: 20px;
-    border-radius: 5px;
-    height: 500px;
-}
-
-#blogs ul li {
-    display: block;
-}
-
-#blogs h3 {
-    /* border-left: 10px solid #58BC82;
-    background-color: #58BC82; */
-    color: black;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-}
-
-#blogs ul li a:hover {
-    border-bottom: 1px solid rgb(56, 56, 56);
-}
-
 #projects {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project {
     display: flex;
     align-items: center;
     padding: 20px 0;
+    flex-direction: column;
+    display: 300px;
+    width: 350px;
+    margin: 30px;
+    height: fit-content;
+    box-shadow: 1px 1px 5px rgb(210, 210, 210);
+    padding: 10px;
+}
+
+.project-data {
+    height: 0;
+    transition: 50ms;
+    overflow: hidden;
+}
+
+.project:hover .project-data {
+    display: inline-block;
+    height: auto;
+    padding: 10px;
+    width: 350px;
+}
+
+.project-data>section {
+    margin: 15px 0;
+}
+
+.project-data>section:nth-child(2) {
+    margin: 20px 0;
 }
 
 .project a {
+    font-size: 14px;
+    color: blue;
+}
+
+.project h4 {
     font-size: 30px;
 }
 
 .project img {
-    width: 70px;
+    width: 350px;
     padding: 0 20px;
-}
-
-.todo-list>a{
-    color: rgb(14, 123, 131);
-    font-size: 40px;
-    font-family: 'Satisfy', cursive;
-}
-
-.pixels-art > a > img{
-    width: 200px;
 }
 
 #shopping-cart-img {
@@ -299,14 +301,6 @@ footer h5 {
         display: block;
         padding: 10px;
     }
-    .dropdown-items ul li a {
-        color: black;
-        font-size: 18px;
-    }
-
-    header ul li a {
-        font-size: 14px;
-    }
 
     #foto-descricao {
         display: block;
@@ -337,7 +331,7 @@ footer h5 {
 
     #habilidades {
         font-size: 18px;
-        height: 420px;
+        height: 500px;
         width: 90vw;
         margin: auto;
     }
@@ -357,6 +351,10 @@ footer h5 {
     main ul li {
         display: block;
         padding: 5px 0 5px 0;
+    }
+
+    #habilidades ul li {
+        padding: 5px 0!important;
     }
 
     footer h4 {
