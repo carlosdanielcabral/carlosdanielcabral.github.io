@@ -357,6 +357,30 @@ footer h5 {
         padding: 5px 0!important;
     }
 
+    .projects {
+        padding: 0px;
+    }
+
+    .project {
+        width: 250px;
+        margin: 10px 0;
+    }
+
+    .project-data {
+        width: 250px!important;
+        box-sizing: border-box;
+    }
+
+    .project-data section {
+        margin: 0;
+        width: inherit;
+        box-sizing: border-box;
+    }
+
+    .project img {
+        width: 250px;
+    }
+
     footer h4 {
         font-size: 14px;
     }
