@@ -1,4 +1,4 @@
-const projectsContainer = document.getElementById('projects');
+const projectsContainer = document.getElementById('projects-container');
 
 const createElement = (tag, property = false, value = false) => {
   const element = document.createElement(tag);
@@ -11,13 +11,11 @@ projects.forEach((project) => {
 
   const projectContainer = createElement('section', 'className', 'project');
 
-  if (image !== null) {
-    const img = createElement('img', 'src', image);
-    projectContainer.appendChild(img);
-  } else {
-    const h4 = createElement('h4', 'innerHTML', name);
-    projectContainer.appendChild(h4);
-  }
+  const h4 = createElement('h4', 'innerHTML', name);
+  projectContainer.appendChild(h4);
+  const span = createElement('button', 'className', 'information');
+  span.innerHTML = '?';
+  projectContainer.appendChild(span);
 
   const projectDataContainer = createElement('div', 'className', 'project-data');
 

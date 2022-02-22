@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfólio de desenvolvimento Web">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React, Git, GitHub">
     <meta name="author" content="Carlos Daniel Cabral">
 
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -14,70 +14,76 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Roboto+Mono:wght@100;200&family=Satisfy&display=swap" rel="stylesheet">  </head>
 
   <body>
     <header>
-      <nav>
-        <span class="nome">
-          <h1>Carlos Daniel Cabral</h1>
-          <h2>Desenvolvedor de Software</h2>
-        </span>
+      <section class="title">
+        <h1>
+          Carlos Daniel Cabral
+        </h1>
 
-        <div class="dropdown">
-          <button><img src="img/menu_white.svg" alt="ícone de menu"></button>
+        <h2>
+          Desenvolvedor de Software
+        </h2>
+      </section>
 
-          <div class="dropdown-items">
-            <ul>
-              <li>
-              <a href="#minha-foto"> Sobre mim </a>
-              </li>
-              <li><a href="#minhas-habilidades">Minhas habilidades</a></li>
-              <li><a href="#projects">Projetos</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <section id="foto-descricao">
-        <img src="img/eu.webp" alt="Minha foto" width="200px" id="#minha-foto" />
-        <p id="#quem-sou-eu">
-          Eu me chamo Carlos Daniel, tenho 19 anos e moro em <em>Vieiras, Minas Gerais</em>.
-          Desde a adolescência me interessei pela área de desenvolvimento e hoje
-          estudo desenvolvimento web na Trybe.
-        </p>
+      <section class="social-network">
+        <img src="img/linkedin-icon.png" alt="Linkedin">
+        <img src="img/github-icon.png" alt="GitHub">
       </section>
     </header>
 
-    <main class="grid-container">
-      <section id="habilidades" class="grid-item1">
-        <h3 id="minhas-habilidades">Minhas habilidades</h3>
-          <ul>
-              <li>HTML</li>
-              <li>CSS </li>
-              <li>Javascript</li>
-              <li>PHP</li>
-              <li>MySQL</li>
-              <li>React</li>
-              <li>Git</li>
-              <li>GitHub</li>
-          </ul>
-      </section>
+    <main>
+      <div class="row">
+        <section class="about">
+          <div>
+            <h3>Sobre mim</h3>
+            <img src="./img/me.jpeg" alt="Eu">
+            <p>
+              Meu nome é Carlos Daniel, nasci em 2001 e há anos me apaixonei pela área de desenvolvimento. Hoje estudo Análise e Desenvolvimento de Sistemas na Faculdade Católica Paulista e desenvolvimento de Software na Trybe.
+            </p>
+          </div>
+        </section>
+  
+        <section class="skills">
+          <h3>
+            Minhas habilidades
+          </h3>
+          <section>
+            <div class="skill">
+              <img src="img/html-icon.png" alt="HTML icon">
+              <h4>HTML5</h4>
+            </div>
+  
+            <div class="skill">
+              <img src="img/css3-icon.png" alt="CSS icon">
+              <h4>CSS</h4>
+            </div>
+  
+            <div class="skill">
+              <img src="img/js-without-bg.png" alt="JS icon">
+              <h4>JavaScript</h4>
+            </div>
+            
+            <div class="skill">
+              <img src="img/react-icon.png" alt="React icon">
+              <h4>React</h4>
+            </div>
+          </section>
+        </section>
+      </div>
 
-      <section id="projects" class="grid-item3">
-        <script src="./js/data.js"></script>
-        <script src="./js/index.js"></script>
-      </section>
+      <div class="row">
+        <section id="projects">
+          <h3>
+            Meus projetos
+          </h3>
+          <section id="projects-container">
+            <script src="./js/data.js"></script>
+            <script src="./js/index.js"></script>
+          </section>
+        </section>
+      </div>
     </main>
-
-    <footer>
-      <h4>Desenvolvido por</h5>
-      <h5>Carlos Daniel Cabral Figueiredo Alves</h6>
-      <span class="redes-sociais">
-        <a rel="noopener noreferrer" href="https://www.linkedin.com/in/carlos-daniel-cabral/" target="_blank"><img src="img/linkedin-icon.png" alt="ícone com link para o meu linkedin"></a>
-
-        <a rel="noopener noreferrer" href="https://github.com/carlosdanielcabral" target="_blank"><img src="img/github-icon.png" alt="ícone do github com o link para o meu perfil"></a>
-      </span>
-    </footer>
   </body>
 </html>
