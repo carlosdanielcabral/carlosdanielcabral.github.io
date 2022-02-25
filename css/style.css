@@ -141,16 +141,18 @@ h3 {
   align-items: center;
   border: 1px solid rgb(230, 230, 230);
   border-radius: 3px;
+  color: rgb(20, 20, 20);
   display: flex;
+  font-weight: 200;
   height: 80px;
   justify-content: space-between;
   margin: 60px;
-  padding: 10px;
+  padding: 20px;
   width: 250px;
 }
 
 .project h4 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
 }
 
@@ -163,6 +165,7 @@ h3 {
   opacity: 0;
   padding: 0 15px;
   position: absolute;
+  text-align: left;
   transition: 500ms;
   width: 380px;
   z-index: -1;
@@ -189,6 +192,7 @@ h3 {
 
 .project-data a {
   color: white;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -197,18 +201,9 @@ h3 {
 }
 
 .information {
-  align-items: center;
-  background-color: blue;;
-  border: 1px double white;
-  border-radius: 50%;
-  box-sizing: content-box;
-  color: white;
-  display: flex;
-  font-weight: 600;
-  height: 20px;
-  justify-content: center;
-  padding: 1.5px;
-  width: 20px;
+  background-color: inherit;
+  border: none;
+  color: rgb(28, 102, 136);
 }
 
 .information:focus + .project-data {
@@ -269,5 +264,9 @@ h3 {
 
   .project-data {
     width: 250px;
+  }
+
+  .project-data .skills {
+    align-items: flex-start;
   }
 }
