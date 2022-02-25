@@ -256,6 +256,10 @@ h3 {
   .skills {
     margin-top: 80px;
   }
+  
+  .skills section {
+    justify-content: center;
+  }
 
   .project {
     align-items: flex-start;
