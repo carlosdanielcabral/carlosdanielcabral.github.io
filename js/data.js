@@ -36,7 +36,7 @@ const projects = [
   },
   {
     name: 'MyWallet',
-    image: null,
+    image: './img/projects/my-wallet.png',
     description: 'Este projeto é uma aplicação web desenvolvida em React que tem como objetivo auxiliar no gerenciamento de despesas.',
     skills: ['HTML', 'CSS', 'Javascript', 'Redux', 'React', 'API', 'Git', 'GitHub'],
     link: 'https://epic-ritchie-020849.netlify.app/',

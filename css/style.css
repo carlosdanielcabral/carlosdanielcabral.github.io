@@ -22,6 +22,7 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 2;
 }
 
 .title {
@@ -140,38 +141,43 @@ h3 {
 .project {
   align-items: center;
   border-radius: 3px;
+  box-shadow: 1px 1px 5px 1px rgb(230, 230, 230);
   color: rgb(20, 20, 20);
   display: flex;
   font-weight: 200;
   flex-flow: column nowrap;
-  height: 80px;
+  height: 300px;
   justify-content: space-between;
-  margin: 60px;
-  padding: 20px;
-  width: 250px;
+  margin: 30px;
+  padding: 10px;
+  width: 350px;
 }
 
 .project h4 {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 200;
+  text-align: center;
+  width: 100%;
 }
 
 .project img {
-  width: 300px;
+  margin: 15px 0;
+  width: 100%;
 }
 
 .project-data {
-  background-color: rgba(20, 20, 20, 0.7);
+  background-color: rgba(20, 20, 20, 0.9);
   border-radius: 3px;
   box-shadow: 1px 2px 5px 1px rgb(200, 200, 200);
   color: white;
-  overflow: hidden;
+  height: 300px;
   opacity: 0;
-  padding: 0 15px;
+  overflow: auto;
+  padding: 15px;
   position: absolute;
   text-align: left;
   transition: 500ms;
-  width: 380px;
+  width: 350px;
   z-index: -1;
 }
 
@@ -196,7 +202,10 @@ h3 {
 
 .project-data a {
   color: white;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 20px 0;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -268,13 +277,20 @@ h3 {
   .project {
     align-items: flex-start;
     margin: 30px 0;
+    width: 95vw;
+  }
+
+  .project-data .skills {
+    margin: 0;
   }
 
   .project-data {
-    width: 250px;
+    margin: 0;
+    width: 95vw;
   }
 
   .project-data .skills {
     align-items: flex-start;
   }
+
 }
