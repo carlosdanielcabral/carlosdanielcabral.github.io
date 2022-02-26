@@ -12,7 +12,9 @@ projects.forEach((project) => {
   const projectContainer = createElement('section', 'className', 'project');
 
   const h4 = createElement('h4', 'innerHTML', name);
+  const img = createElement('img', 'src', image);
   projectContainer.appendChild(h4);
+  projectContainer.appendChild(img);
   const span = createElement('button', 'className', 'material-icons information');
   span.innerHTML = 'info';
   projectContainer.appendChild(span);

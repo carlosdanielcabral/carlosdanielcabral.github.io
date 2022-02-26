@@ -139,11 +139,11 @@ h3 {
 
 .project {
   align-items: center;
-  border: 1px solid rgb(230, 230, 230);
   border-radius: 3px;
   color: rgb(20, 20, 20);
   display: flex;
   font-weight: 200;
+  flex-flow: column nowrap;
   height: 80px;
   justify-content: space-between;
   margin: 60px;
@@ -154,6 +154,10 @@ h3 {
 .project h4 {
   font-size: 20px;
   font-weight: 300;
+}
+
+.project img {
+  width: 300px;
 }
 
 .project-data {
