@@ -6,13 +6,13 @@ const projects = [
   //   skills: ['HTML', 'CSS', 'Javascript', 'Git', 'GitHub'],
   //   link: './projetos/todo-list',
   // },
-  // {
-  //   name: 'Pixels Art',
-  //   image: './img/pixels-art.png',
-  //   description: 'Este projeto é uma aplicação web que tem como objetivo ser um entretenimento para o usuário. Nele podemos usar a imaginação para desenhar pintando os quadrados com as cores geradas randomicamente.',
-  //   skills: ['HTML', 'CSS', 'Javascript', 'Git', 'GitHub'],
-  //   link: '/projetos/pixels-art',
-  // },
+  /* {
+    name: 'Pixels Art',
+    image: './img/pixels-art.png',
+    description: 'Este projeto é uma aplicação web que tem como objetivo ser um entretenimento para o usuário. Nele podemos usar a imaginação para desenhar pintando os quadrados com as cores geradas randomicamente.',
+    skills: ['HTML', 'CSS', 'Javascript', 'Git', 'GitHub'],
+    link: '/projetos/pixels-art',
+  },*/
   {
     name: 'Project ShoppingCart',
     image: './img/projects/shopping-cart.png',
@@ -33,5 +33,12 @@ const projects = [
     description: 'Este projeto é uma aplicação web desenvolvida em React que tem como objetivo buscar músicas, favoritá-las e ouvi-las. Neste app, em particular, só está disponível um preview de cada música, em respeito aos direitos autorais de cada artista.',
     skills: ['HTML', 'CSS', 'Javascript', 'React', 'API', 'Git', 'GitHub'],
     link: 'https://angry-goldstine-67625f.netlify.app/',
-  }
+  },
+  {
+    name: 'MyWallet',
+    image: null,
+    description: 'Este projeto é uma aplicação web desenvolvida em React que tem como objetivo auxiliar no gerenciamento de despesas.',
+    skills: ['HTML', 'CSS', 'Javascript', 'Redux', 'React', 'API', 'Git', 'GitHub'],
+    link: 'https://epic-ritchie-020849.netlify.app/',
+  },
 ];
