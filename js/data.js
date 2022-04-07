@@ -13,16 +13,16 @@ const projects = [
     skills: ['HTML', 'CSS', 'Javascript', 'Git', 'GitHub'],
     link: '/projetos/pixels-art',
   },*/
-  {
-    name: 'Project ShoppingCart',
-    image: './img/projects/shopping-cart.png',
-    description: 'Este projeto é uma aplicação web que tem como objetivo simular um carrinho de compras em um e-commerce. Nele podemos pesquisar por produtos fornecidos pela API do Mercado Livre e adicionar esses produtos ao carrinho de compras, que os armazena e soma o valor total da compra.',
-    skills: ['HTML', 'CSS', 'Javascript', 'API', 'Git', 'GitHub'],
-    link: '/projetos/shooping-cart/',
-  },
+  // {
+  //   name: 'Project ShoppingCart',
+  //   image: './img/projects/shopping-cart.png',
+  //   description: 'Este projeto é uma aplicação web que tem como objetivo simular um carrinho de compras em um e-commerce. Nele podemos pesquisar por produtos fornecidos pela API do Mercado Livre e adicionar esses produtos ao carrinho de compras, que os armazena e soma o valor total da compra.',
+  //   skills: ['HTML', 'CSS', 'Javascript', 'API', 'Git', 'GitHub'],
+  //   link: '/projetos/shooping-cart/',
+  // },
   {
     name: 'E-commerce (Front-end)',
-    image: './img/projects/e-commerce.png',
+    image: './img/projects/e-commerce-2.png',
     description: 'Este projeto é uma aplicação web desenvolvida em React que tem como objetivo simular um e-commerce básico. Nele podemos pesquisar por produtos fornecidos pela API do Mercado Livre pelo nome e/ou categoria, ver uma descrição detalhadas de cada produto em página de detalhes, adicionar ao carrinho de compras, alterar a quantidade de produtos no carrinho e/ou removê-lo do mesmo e acessar uma página para finalizar a compra, em que podemos ver um resumo das aquisições e inserir os dados para compra, que não é disponilizada neste projeto.',
     skills: ['HTML', 'CSS', 'Javascript', 'React', 'API', 'Git', 'GitHub'],
     link: 'https://angry-hodgkin-648f7f.netlify.app/',
