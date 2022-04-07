@@ -229,6 +229,7 @@ h3 {
   header {
     justify-content: space-between;
     margin: 0;
+    padding: 0 10px;
     position: fixed;
     top: 0;
     width: 100vw;
