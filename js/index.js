@@ -13,6 +13,7 @@ projects.forEach((project) => {
 
   const h4 = createElement('h4', 'innerHTML', name);
   const img = createElement('img', 'src', image);
+  img.alt = name;
   projectContainer.appendChild(h4);
   projectContainer.appendChild(img);
   const span = createElement('button', 'className', 'material-icons information');
