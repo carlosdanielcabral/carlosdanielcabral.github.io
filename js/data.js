@@ -22,7 +22,7 @@ const projects = [
   // },
   {
     name: 'E-commerce (Front-end)',
-    image: './img/projects/e-commerce-2.jpg',
+    image: './img/projects/e-commerce-2.png',
     description: 'Este projeto é uma aplicação web desenvolvida em NextJS que tem como objetivo simular um e-commerce básico. Nele podemos pesquisar por produtos fornecidos pela API do Mercado Livre pelo nome e/ou categoria, ver uma descrição detalhadas de cada produto em página de detalhes, adicionar ao carrinho de compras, alterar a quantidade de produtos no carrinho e/ou removê-lo do mesmo e acessar uma página para finalizar a compra, em que podemos ver um resumo das aquisições e inserir os dados para compra, que não é disponilizada neste projeto.',
     skills: ['HTML', 'CSS', 'Javascript', 'React', 'API', 'Git', 'GitHub', 'React Hooks', 'Material UI', 'Context API', 'NextJS'],
     link: 'https://e-commerce-front-end-nextjs.vercel.app/',
