@@ -150,6 +150,7 @@ h3 {
   justify-content: space-between;
   margin: 30px;
   padding: 10px;
+  position: relative;
   width: 350px;
 }
 
@@ -169,13 +170,16 @@ h3 {
   background-color: rgba(20, 20, 20, 0.9);
   border-radius: 3px;
   box-shadow: 1px 2px 5px 1px rgb(200, 200, 200);
+  box-sizing: border-box;
   color: white;
-  height: 300px;
+  height: 100%;
   opacity: 0;
   overflow: auto;
   padding: 15px;
+  left: 0;
   position: absolute;
   text-align: left;
+  top: 0;
   transition: 500ms;
   width: 350px;
   z-index: -1;
@@ -187,7 +191,7 @@ h3 {
 }
 
 .project-data .skills {
-  padding: 5px;
+  padding: 5px 0;
   width: 100%;
 }
 
@@ -225,7 +229,27 @@ h3 {
   z-index: 1;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
+  .about {
+    width: 40%;
+  }
+
+  .skills {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .about {
+    width: 30%;
+  }
+
+  .skills {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 820px) {
   header {
     justify-content: space-between;
     margin: 0;
@@ -277,7 +301,7 @@ h3 {
 
   .project {
     align-items: flex-start;
-    margin: 30px 0;
+    margin: 10px 0 200px 0;
     width: 95vw;
   }
 
